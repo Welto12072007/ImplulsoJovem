@@ -186,8 +186,8 @@ function App() {
             </div>
             <div className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-2xl">
               <div className="text-center space-y-6">
-                <div className="text-6xl font-bold text-red-600">68%</div>
-                <p className="text-lg text-gray-700 font-medium">dos jovens deixam o primeiro emprego em até 6 meses</p>
+                <div className="text-6xl font-bold text-red-600">96,2%</div>
+                <p className="text-lg text-gray-700 font-medium">rotatividade de jovens de 18 a 24 anos em 2024 (Ministério do Trabalho)</p>
                 <div className="grid grid-cols-2 gap-4 pt-4">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-gray-900">3x</div>
