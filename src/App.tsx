@@ -79,7 +79,7 @@ function App() {
                  Integração rápida e desenvolvimento de <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">jovens talentos</span> para pequenas empresas.
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Unimos empresas que formam e jovens que crescem, com onboarding estruturado, aprendizado contínuo e acompanhamento próximo para que todos avancem juntos.
+                  Unimos empresas que formam e jovens que crescem, com onboarding estruturado, aprendizado contínuo e acompanhamento próximo para eliminiar inseguranças, rotatividade e ampliar o comprometimento.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
