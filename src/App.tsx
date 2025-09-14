@@ -961,9 +961,6 @@ function App() {
               alt={zoomedImage.alt}
               className="w-full h-full object-contain rounded-lg"
             />
-            <div className="absolute bottom-4 left-4 right-4 bg-black bg-opacity-60 text-white p-4 rounded-lg">
-              <p className="text-sm">{zoomedImage.alt}</p>
-            </div>
           </div>
         </div>
       )}
