@@ -29,7 +29,7 @@ function App() {
                 <Users className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                ImpulsoJovem
+                ImpulsoJov
               </span>
             </div>
             <nav className="hidden md:flex space-x-8">
@@ -38,9 +38,7 @@ function App() {
               <a href="#empresas" className="text-gray-600 hover:text-blue-600 transition-colors">Para Empresas</a>
               <a href="#como-funciona" className="text-gray-600 hover:text-blue-600 transition-colors">Como Funciona</a>
             </nav>
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all transform hover:scale-105">
-              Começar Agora
-            </button>
+
           </div>
         </div>
       </header>
@@ -51,41 +49,21 @@ function App() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
-                  <Zap className="w-4 h-4" />
-                  <span>Plataforma de Integração Inteligente</span>
-                </div>
+          
                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                  Conecte <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">jovens talentos</span> às suas oportunidades
+                 Integração rápida e desenvolvimento de <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">jovens talentos</span> para pequenas empresas.
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  A primeira plataforma que integra onboarding, treinamento e acompanhamento personalizado para micro e pequenas empresas, com IA e WhatsApp.
+                  Unimos empresas que formam e jovens que crescem, com onboarding estruturado, aprendizado contínuo e acompanhamento próximo para que todos avancem juntos.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all transform hover:scale-105 flex items-center justify-center space-x-2">
-                  <span>Demonstração Gratuita</span>
-                  <ArrowRight className="w-5 h-5" />
-                </button>
                 <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-all flex items-center justify-center space-x-2">
                   <PlayCircle className="w-5 h-5" />
                   <span>Ver como funciona</span>
                 </button>
               </div>
-              <div className="flex items-center space-x-8 pt-4">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-900">85%</div>
-                  <div className="text-sm text-gray-600">Retenção de jovens</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-900">60%</div>
-                  <div className="text-sm text-gray-600">Menos tempo de integração</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-900">500+</div>
-                  <div className="text-sm text-gray-600">Empresas conectadas</div>
-                </div>
-              </div>
+              
             </div>
             <div className="lg:pl-12">
               <div className="relative">
@@ -164,7 +142,7 @@ function App() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">Lacunas em competências essenciais</h3>
-                    <p className="text-gray-600">Jovens chegam sem hard skills (Excel, design, social media) e soft skills (comunicação, oratória).</p>
+                    <p className="text-gray-600">Jovens chegam inseguros para entrar no mercado de trabalho, sem hard skills (Excel, design, social media) e soft skills (comunicação, oratória).</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -201,35 +179,106 @@ function App() {
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Nossa Solução</h3>
               <p className="text-xl text-gray-600">Plataforma completa que integra, treina e acompanha jovens talentos com IA e WhatsApp</p>
             </div>
-            
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto">
-                  <Target className="w-8 h-8 text-white" />
+
+            {/* Benefícios-Chave */}
+            <div className="grid lg:grid-cols-2 gap-12 mb-16">
+              <div className="space-y-6">
+                <div className="flex items-center space-x-3 mb-4">
+                  <Building2 className="w-6 h-6 text-orange-600" />
+                  <h4 className="text-xl font-bold text-gray-900">Para Empresas</h4>
                 </div>
-                <h4 className="font-semibold text-gray-900">Onboarding Estruturado</h4>
-                <p className="text-gray-600 text-sm">Templates prontos e cronogramas personalizados para integração eficiente</p>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <h5 className="font-semibold text-gray-900">Economizar tempo</h5>
+                      <p className="text-gray-600 text-sm">Processos automatizados reduzem sobrecarga da equipe</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <h5 className="font-semibold text-gray-900">Padronizar treinamento</h5>
+                      <p className="text-gray-600 text-sm">Cronogramas estruturados garantem qualidade consistente</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <h5 className="font-semibold text-gray-900">Reter talentos</h5>
+                      <p className="text-gray-600 text-sm">Jovens comprometidos e engajados permanecem mais tempo</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto">
-                  <Brain className="w-8 h-8 text-white" />
+
+              <div className="space-y-6">
+                <div className="flex items-center space-x-3 mb-4">
+                  <Users className="w-6 h-6 text-blue-600" />
+                  <h4 className="text-xl font-bold text-gray-900">Para Jovens</h4>
                 </div>
-                <h4 className="font-semibold text-gray-900">Treinamento IA</h4>
-                <p className="text-gray-600 text-sm">Hard e soft skills personalizados por inteligência artificial</p>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <h5 className="font-semibold text-gray-900">Aprender rápido</h5>
+                      <p className="text-gray-600 text-sm">Trilhas personalizadas aceleram o desenvolvimento</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <h5 className="font-semibold text-gray-900">Ganhar confiança</h5>
+                      <p className="text-gray-600 text-sm">Acompanhamento próximo e feedbacks constantes</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <h5 className="font-semibold text-gray-900">Se adaptar melhor</h5>
+                      <p className="text-gray-600 text-sm">Onboarding estruturado facilita integração à empresa</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto">
-                  <TrendingUp className="w-8 h-8 text-white" />
-                </div>
-                <h4 className="font-semibold text-gray-900">Acompanhamento</h4>
-                <p className="text-gray-600 text-sm">Dashboard gamificado com métricas em tempo real</p>
+            </div>
+
+            {/* O que oferecemos */}
+            <div className="border-t border-gray-200 pt-12">
+              <div className="text-center mb-8">
+                <h4 className="text-2xl font-bold text-gray-900 mb-2">O que Disponibilizamos</h4>
+                <p className="text-gray-600">Ferramentas completas para transformar a gestão de jovens talentos</p>
               </div>
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto">
-                  <MessageSquare className="w-8 h-8 text-white" />
+              
+              <div className="grid md:grid-cols-4 gap-8">
+                <div className="text-center space-y-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto">
+                    <Target className="w-8 h-8 text-white" />
+                  </div>
+                  <h5 className="font-semibold text-gray-900">Onboarding Estruturado</h5>
+                  <p className="text-gray-600 text-sm">Templates prontos e cronogramas personalizados para integração eficiente</p>
                 </div>
-                <h4 className="font-semibold text-gray-900">WhatsApp</h4>
-                <p className="text-gray-600 text-sm">Notificações, feedbacks e suporte via WhatsApp</p>
+                <div className="text-center space-y-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto">
+                    <Brain className="w-8 h-8 text-white" />
+                  </div>
+                  <h5 className="font-semibold text-gray-900">Treinamento com IA</h5>
+                  <p className="text-gray-600 text-sm">Hard e soft skills personalizados por inteligência artificial</p>
+                </div>
+                <div className="text-center space-y-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto">
+                    <TrendingUp className="w-8 h-8 text-white" />
+                  </div>
+                  <h5 className="font-semibold text-gray-900">Acompanhamento</h5>
+                  <p className="text-gray-600 text-sm">Dashboard gamificado com métricas em tempo real</p>
+                </div>
+                <div className="text-center space-y-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto">
+                    <MessageSquare className="w-8 h-8 text-white" />
+                  </div>
+                  <h5 className="font-semibold text-gray-900">WhatsApp</h5>
+                  <p className="text-gray-600 text-sm">Notificações, feedbacks e suporte via WhatsApp</p>
+                </div>
               </div>
             </div>
           </div>
@@ -242,12 +291,9 @@ function App() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
-                  <Users className="w-4 h-4" />
-                  <span>Para Jovens Profissionais</span>
-                </div>
+      
                 <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-                  Desenvolva suas <span className="text-blue-600">competências</span> e acelere sua carreira
+                  Impulsione a  <span className="text-blue-600">carreira</span> de seus colaboradores
                 </h2>
                 <p className="text-xl text-gray-600">
                   Plataforma gamificada que te ajuda a desenvolver hard skills e soft skills essenciais para o mercado de trabalho.
@@ -277,10 +323,7 @@ function App() {
                 </div>
               </div>
 
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all transform hover:scale-105 flex items-center space-x-2">
-                <span>Começar meu desenvolvimento</span>
-                <ArrowRight className="w-5 h-5" />
-              </button>
+          
             </div>
 
             <div className="space-y-6">
@@ -408,10 +451,7 @@ function App() {
 
             <div className="space-y-8">
               <div className="space-y-4">
-                <div className="inline-flex items-center space-x-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-medium">
-                  <Building2 className="w-4 h-4" />
-                  <span>Para Empresas</span>
-                </div>
+              
                 <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
                   Integre e desenvolva <span className="text-orange-600">jovens talentos</span> sem sobrecarregar sua equipe
                 </h2>
@@ -451,10 +491,7 @@ function App() {
                 </div>
               </div>
 
-              <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all transform hover:scale-105 flex items-center space-x-2">
-                <span>Teste grátis por 30 dias</span>
-                <ArrowRight className="w-5 h-5" />
-              </button>
+
             </div>
           </div>
         </div>
@@ -595,37 +632,12 @@ function App() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-8">
             <h2 className="text-3xl lg:text-5xl font-bold text-white leading-tight">
-              Pronto para revolucionar a integração de jovens talentos?
+              Prontos para impulsionar seu negócio com jovens talentos?
             </h2>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">
               Junte-se às empresas que já estão transformando onboarding, desenvolvimento e retenção de talentos com nossa plataforma.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all transform hover:scale-105 flex items-center space-x-2">
-                <span>Demonstração Gratuita</span>
-                <ArrowRight className="w-5 h-5" />
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all flex items-center space-x-2">
-                <PlayCircle className="w-5 h-5" />
-                <span>Ver Apresentação</span>
-              </button>
-            </div>
-
-            <div className="flex items-center justify-center space-x-8 pt-8 opacity-80">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">500+</div>
-                <div className="text-sm text-blue-200">Empresas</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">2.5k</div>
-                <div className="text-sm text-blue-200">Jovens conectados</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">85%</div>
-                <div className="text-sm text-blue-200">Taxa de sucesso</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -639,7 +651,7 @@ function App() {
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                   <Users className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-xl font-bold">TalentBridge</span>
+                <span className="text-xl font-bold">ImpulsoJov</span>
               </div>
               <p className="text-gray-400">
                 Conectando jovens talentos às oportunidades através de tecnologia e inteligência artificial.
@@ -678,7 +690,7 @@ function App() {
           </div>
           
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 TalentBridge. Todos os direitos reservados.</p>
+            <p>&copy; 2025 ImpulsoJov. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>
