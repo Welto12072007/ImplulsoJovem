@@ -222,7 +222,7 @@ function App() {
                       <h5 className="font-semibold text-gray-900">Reter talentos</h5>
                       <p className="text-gray-600 text-sm">Jovens comprometidos e engajados permanecem mais tempo</p>
                     </div>
-                  </div>
+                  </div>  
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
                     <div>
@@ -708,12 +708,23 @@ function App() {
             </div>
             
             <div>
-              <h4 className="font-semibold mb-4">Empresa</h4>
+              <h4 className="font-semibold mb-4">Equipe</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Sobre</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Carreiras</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contato</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Privacidade</a></li>
+                <li><a href="https://instagram.com/_murilofinger" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center space-x-2">
+                  <span>@_murilofinger</span>
+                </a></li>
+                <li><a href="https://instagram.com/englernk" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center space-x-2">
+                  <span>@englernk</span>
+                </a></li>
+                <li><a href="https://instagram.com/na_brisaa_" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center space-x-2">
+                  <span>@na_brisaa_</span>
+                </a></li>
+                <li><a href="https://instagram.com/cintia.schenkel" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center space-x-2">
+                  <span>@cintia.schenkel</span>
+                </a></li>
+                <li><a href="https://instagram.com/_wellingtonkbf_" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center space-x-2">
+                  <span>@_wellingtonkbf_</span>
+                </a></li>
               </ul>
             </div>
           </div>
