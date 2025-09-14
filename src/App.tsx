@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   ArrowRight, 
   Users, 
@@ -14,10 +14,35 @@ import {
   Target,
   Lightbulb,
   Zap,
-  Shield
+  Shield,
+  X,
+  Monitor,
+  Tablet
 } from 'lucide-react';
 
+// Importar imagens da parte da empresa
+import empresaImg1 from './imgParteDaEmpresa/WhatsApp Image 2025-09-14 at 14.18.55.jpeg';
+import empresaImg2 from './imgParteDaEmpresa/WhatsApp Image 2025-09-14 at 14.19.20.jpeg';
+import empresaImg3 from './imgParteDaEmpresa/WhatsApp Image 2025-09-14 at 14.19.36.jpeg';
+import empresaImg4 from './imgParteDaEmpresa/WhatsApp Image 2025-09-14 at 14.19.55.jpeg';
+import empresaImg5 from './imgParteDaEmpresa/WhatsApp Image 2025-09-14 at 14.20.08.jpeg';
+import empresaImg6 from './imgParteDaEmpresa/WhatsApp Image 2025-09-14 at 14.20.29.jpeg';
+import empresaImg7 from './imgParteDaEmpresa/WhatsApp Image 2025-09-14 at 14.20.48.jpeg';
+import empresaImg8 from './imgParteDaEmpresa/WhatsApp Image 2025-09-14 at 14.21.01.jpeg';
+import empresaImg9 from './imgParteDaEmpresa/WhatsApp Image 2025-09-14 at 14.21.14.jpeg';
+
+// Importar imagens da parte dos jovens
+import jovemImg1 from './imgParteDosJovens/WhatsApp Image 2025-09-14 at 14.13.47.jpeg';
+import jovemImg2 from './imgParteDosJovens/WhatsApp Image 2025-09-14 at 14.14.06.jpeg';
+import jovemImg3 from './imgParteDosJovens/WhatsApp Image 2025-09-14 at 14.14.29.jpeg';
+import jovemImg4 from './imgParteDosJovens/WhatsApp Image 2025-09-14 at 14.14.47.jpeg';
+import jovemImg5 from './imgParteDosJovens/WhatsApp Image 2025-09-14 at 14.15.04.jpeg';
+import jovemImg6 from './imgParteDosJovens/WhatsApp Image 2025-09-14 at 14.15.21.jpeg';
+
 function App() {
+  const [isDemoOpen, setIsDemoOpen] = useState(false);
+  const [zoomedImage, setZoomedImage] = useState<{src: string, alt: string} | null>(null);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -58,7 +83,10 @@ function App() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-all flex items-center justify-center space-x-2">
+                <button 
+                  onClick={() => setIsDemoOpen(true)}
+                  className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-all flex items-center justify-center space-x-2"
+                >
                   <PlayCircle className="w-5 h-5" />
                   <span>Ver como funciona</span>
                 </button>
@@ -694,6 +722,251 @@ function App() {
           </div>
         </div>
       </footer>
+
+      {/* Demo Modal */}
+      {isDemoOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="p-6 border-b border-gray-200 flex items-center justify-between">
+              <h3 className="text-2xl font-bold text-gray-900">Como Funciona na Prática</h3>
+              <button 
+                onClick={() => setIsDemoOpen(false)}
+                className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            
+            <div className="p-6 space-y-8">
+              {/* Visão Geral */}
+              <div className="text-center mb-8">
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Demonstração da Plataforma</h4>
+                <p className="text-gray-600">Veja como empresas e jovens interagem com nossa solução</p>
+              </div>
+
+              {/* Dashboard da Empresa */}
+              <div className="space-y-6">
+                <div className="flex items-center space-x-3">
+                  <Monitor className="w-6 h-6 text-blue-600" />
+                  <h5 className="text-lg font-semibold text-gray-900">Aplicação da Empresa</h5>
+                </div>
+                
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="bg-gray-50 p-4 rounded-xl">
+                    <div className="aspect-video bg-white rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-lg transition-shadow">
+                      <img 
+                        src={empresaImg1} 
+                        alt="Dashboard Principal - Visão geral da performance dos jovens"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform"
+                        onClick={() => setZoomedImage({src: empresaImg1, alt: "Dashboard Principal - Visão geral da performance dos jovens"})}
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gray-50 p-4 rounded-xl">
+                    <div className="aspect-video bg-white rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-lg transition-shadow">
+                      <img 
+                        src={empresaImg2} 
+                        alt="Gestão de Talentos - Acompanhamento individual"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform"
+                        onClick={() => setZoomedImage({src: empresaImg2, alt: "Gestão de Talentos - Acompanhamento individual dos jovens"})}
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gray-50 p-4 rounded-xl">
+                    <div className="aspect-video bg-white rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-lg transition-shadow">
+                      <img 
+                        src={empresaImg3} 
+                        alt="Analytics - Relatórios e insights detalhados"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform"
+                        onClick={() => setZoomedImage({src: empresaImg3, alt: "Relatórios e Analytics - Insights e métricas avançadas"})}
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Mais screenshots da empresa */}
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-gray-50 p-4 rounded-xl">
+                    <div className="aspect-video bg-white rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-lg transition-shadow">
+                      <img 
+                        src={empresaImg4} 
+                        alt="Configurações de Onboarding"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform"
+                        onClick={() => setZoomedImage({src: empresaImg4, alt: "Configurações de Onboarding - Templates e cronogramas personalizáveis por cargo e setor"})}
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gray-50 p-4 rounded-xl">
+                    <div className="aspect-video bg-white rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-lg transition-shadow">
+                      <img 
+                        src={empresaImg5} 
+                        alt="Comunicação e Notificações"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform"
+                        onClick={() => setZoomedImage({src: empresaImg5, alt: "Centro de Comunicação - Sistema de notificações automáticas e mensagens personalizadas"})}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Aplicativo do Jovem */}
+              <div className="space-y-6">
+                <div className="flex items-center space-x-3">
+                  <Tablet className="w-6 h-6 text-purple-600" />
+                  <h5 className="text-lg font-semibold text-gray-900">Aplicação do Jovem</h5>
+                </div>
+                
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="bg-gray-50 p-4 rounded-xl">
+                    <div className="aspect-[3/4] bg-white rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-lg transition-shadow">
+                      <img 
+                        src={jovemImg1} 
+                        alt="Tela de Onboarding - Primeiros passos"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform"
+                        onClick={() => setZoomedImage({src: jovemImg1, alt: "Onboarding - Cronograma dos primeiros 90 dias"})}
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gray-50 p-4 rounded-xl">
+                    <div className="aspect-[3/4] bg-white rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-lg transition-shadow">
+                      <img 
+                        src={jovemImg2} 
+                        alt="Trilhas de Aprendizagem - Cursos personalizados"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform"
+                        onClick={() => setZoomedImage({src: jovemImg2, alt: "Trilhas de Aprendizagem - Microcursos personalizados por IA"})}
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gray-50 p-4 rounded-xl">
+                    <div className="aspect-[3/4] bg-white rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-lg transition-shadow">
+                      <img 
+                        src={jovemImg3} 
+                        alt="Dashboard de Progresso - Conquistas e badges"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform"
+                        onClick={() => setZoomedImage({src: jovemImg3, alt: "Progresso & Conquistas - Badges, rankings e gamificação"})}
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Mais screenshots dos jovens */}
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="bg-gray-50 p-4 rounded-xl">
+                    <div className="aspect-[3/4] bg-white rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-lg transition-shadow">
+                      <img 
+                        src={jovemImg4} 
+                        alt="Tarefas e Atividades Diárias"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform"
+                        onClick={() => setZoomedImage({src: jovemImg4, alt: "Tarefas Diárias - Atividades práticas, exercícios e avaliações semanais"})}
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gray-50 p-4 rounded-xl">
+                    <div className="aspect-[3/4] bg-white rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-lg transition-shadow">
+                      <img 
+                        src={jovemImg5} 
+                        alt="Feedback e Comunicação"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform"
+                        onClick={() => setZoomedImage({src: jovemImg5, alt: "Sistema de Feedback - Canal direto com gestores, mentores e chat de suporte"})}
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gray-50 p-4 rounded-xl">
+                    <div className="aspect-[3/4] bg-white rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-lg transition-shadow">
+                      <img 
+                        src={jovemImg6} 
+                        alt="Perfil e Desenvolvimento Pessoal"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform"
+                        onClick={() => setZoomedImage({src: jovemImg6, alt: "Perfil Profissional - Histórico de evolução, competências adquiridas e metas de desenvolvimento"})}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* WhatsApp Integration */}
+              <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-xl">
+                <div className="flex items-center space-x-3 mb-4">
+                  <MessageSquare className="w-6 h-6 text-green-600" />
+                  <h5 className="text-lg font-semibold text-gray-900">Integração WhatsApp</h5>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-white p-4 rounded-lg">
+                    <div className="flex items-center space-x-2 mb-3">
+                      <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                        <MessageSquare className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="font-medium">Bot ImpulsoJovem</span>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="bg-green-100 p-3 rounded-lg text-sm">
+                        "Oi Ana! 👋 Você completou 85% do módulo de Excel. Parabéns! 🎉"
+                      </div>
+                      <div className="bg-green-100 p-3 rounded-lg text-sm">
+                        "Que tal praticar com uma planilha real da empresa? 📊"
+                      </div>
+                      <div className="bg-gray-100 p-3 rounded-lg text-sm text-right">
+                        "Sim, vamos! 😊"
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-600" />
+                      <span className="text-sm text-gray-700">Notificações automáticas</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-600" />
+                      <span className="text-sm text-gray-700">Lembretes personalizados</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-600" />
+                      <span className="text-sm text-gray-700">Suporte 24/7</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-600" />
+                      <span className="text-sm text-gray-700">Feedback em tempo real</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+                            
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Modal de Zoom para Imagens */}
+      {zoomedImage && (
+        <div className="fixed inset-0 bg-black bg-opacity-90 z-[70] flex items-center justify-center p-4">
+          <div className="relative max-w-6xl max-h-[90vh] w-full">
+            <button
+              onClick={() => setZoomedImage(null)}
+              className="absolute top-4 right-4 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-2 rounded-full transition-all z-10"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            <img
+              src={zoomedImage.src}
+              alt={zoomedImage.alt}
+              className="w-full h-full object-contain rounded-lg"
+            />
+            <div className="absolute bottom-4 left-4 right-4 bg-black bg-opacity-60 text-white p-4 rounded-lg">
+              <p className="text-sm">{zoomedImage.alt}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
