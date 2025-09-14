@@ -219,6 +219,13 @@ function App() {
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
                     <div>
+                      <h5 className="font-semibold text-gray-900">Reter talentos</h5>
+                      <p className="text-gray-600 text-sm">Jovens comprometidos e engajados permanecem mais tempo</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
+                    <div>
                       <h5 className="font-semibold text-gray-900">Economizar tempo</h5>
                       <p className="text-gray-600 text-sm">Processos automatizados reduzem sobrecarga da equipe</p>
                     </div>
@@ -230,13 +237,7 @@ function App() {
                       <p className="text-gray-600 text-sm">Cronogramas estruturados garantem qualidade consistente</p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
-                    <div>
-                      <h5 className="font-semibold text-gray-900">Reter talentos</h5>
-                      <p className="text-gray-600 text-sm">Jovens comprometidos e engajados permanecem mais tempo</p>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
 
